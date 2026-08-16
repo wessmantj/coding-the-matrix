@@ -19,3 +19,13 @@ def square_elements(set):
     '''comprehension that squares elements in a set'''
     return {2**x for x in set}
 
+def average(elements: list):
+    '''expression whose value. is the average of the elements list'''
+    n = len(elements)
+    if n == 0:
+        raise ValueError("list can't be empty.")
+    return sum(elements) / n
+
+def sum_of_elements(numbers: list[list[int]]) -> int:
+    """evaluates to the sum of all numbers in all the lists"""
+    return sum(sum(sublist) for sublist in numbers)
