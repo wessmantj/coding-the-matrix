@@ -15,3 +15,7 @@ def is_sum_divisible(numbers: list[int], divisor: int) -> bool:
     
     return sum(numbers) % divisor == 0
 
+def square_elements(set):
+    '''comprehension that squares elements in a set'''
+    return {2**x for x in set}
+
