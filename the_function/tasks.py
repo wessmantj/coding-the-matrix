@@ -30,6 +30,7 @@ def sum_of_elements(numbers: list[list[int]]) -> int:
     '''evaluates to the sum of all numbers in all the lists'''
     return sum(sum(sublist) for sublist in numbers)
 
-def zero_sum_triples(values: set[int]) -> list[tuple[int, int, int]]:
+def zero_sum_triples(values: set[int]) -> tuple[int, int, int]:
     '''given a set of values return tuple of 3 elements that sum to zero'''
-    return [(i, j, k) for i in values for j in values for k in values if i + j + k == 0]
+    
+    return [(i, j, k) for i in values for j in values for k in values if i + j + k == 0 and (i, j, k) != (0, 0, 0)][0]
