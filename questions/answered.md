@@ -1,0 +1,1 @@
+So far the question I got answered that stuck with me was what they are finding now. In 2020 it was more data/larger model makes it smarter, extending the time it has to reason in 2022-2023, and now how long it can go without human intervention and not halucinate, thats the short version. 
