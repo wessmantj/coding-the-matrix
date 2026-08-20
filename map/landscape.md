@@ -1,12 +1,9 @@
 # Landscape
 
-The **durable** structure of AI — the parts that change slowly. Not "who's
+The **durable** structure of AI or the parts that change slowly. Not "who's
 winning this month" (that's `frontier.md`), but the shape of the field: the
 recurring arguments and the axes everything moves along.
 
-> Reconstructed from the session-1 handoff, not from the original notes (those
-> were never saved to disk). Verify and expand; correct anything that reads
-> wrong to you.
 
 ## Region 1 — Specify vs. learn
 

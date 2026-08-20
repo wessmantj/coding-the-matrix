@@ -4,9 +4,7 @@ Focused questions worth actually chasing. Added only after I say so — not one
 question exploded into thirty. If it can't be stated in a sentence and doesn't
 point at something answerable, it doesn't go here.
 
-> The ~30 questions from session 1 were lost (never written to disk) — and by
-> my own note, most were the model over-splitting anyway. Not reconstructing
-> them. We rebuild this with fewer, sharper questions as they come up.
+> We rebuild this with fewer, sharper questions as they come up.
 
 ## Live
 

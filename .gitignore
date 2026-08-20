@@ -1,0 +1,15 @@
+# Editor / IDE
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Conda / virtualenv
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store

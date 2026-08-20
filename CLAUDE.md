@@ -1,7 +1,7 @@
 # How this repo works
 
 This is a **learning space**, not a project. Nothing here ships. The goal is
-depth in AI/ML — enough real understanding of what exists, what works, and
+depth in AI/ML; getting enough real understanding of what exists, what works, and
 what's genuinely unsolved to see openings other people miss. Progress is
 measured in questions actually answered, not code written.
 

@@ -1,7 +1,6 @@
 # coding-the-matrix
 
-A learning space for building real depth in AI/ML. Not a project — nothing
-here ships.
+A learning space for building real depth in AI/ML.
 
 I started this because grinding beginner math wasn't getting me anywhere and
 wasn't interesting enough to keep me going. So I'm working **backwards** from
