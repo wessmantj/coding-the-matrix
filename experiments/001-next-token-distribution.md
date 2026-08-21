@@ -17,7 +17,7 @@ a clean way to watch that happen.
 
 **Model:** starting with a small model gpt-2: 124M.
 
-## Prediction (write BEFORE running — getting it wrong is the point)
+## Prediction
 The real question: does a **missing apostrophe** ("Im" vs "I'm") change what the
 model predicts next, and does the well-formed version predict *better*?
 
@@ -163,7 +163,11 @@ Makes sense here as well, since it's a correct phrase it's giving a good distrib
 ' run'          0.0076
 
 Now this is interesting. This is nearly identical to the one above. Both correctly predict a verb, both peak around 0.09, and it's the 
-same vocabulary just shuffled a little in order. So the typo damage disappeared once the token was no longer a standalone input. 
+same vocabulary just shuffled a little in order. So the typo damage disappeared once the token was no longer a standalone input.
+
+One subtle residue though: "Im gonna" has ' kill' (0.0135) and ' die' (0.0077) in its top 20, and "I'm gonna" doesn't. The grammar
+recovered fully, but a faint register fingerprint survived — "Im" leans slightly toward dramatic/informal text, since that's the kind
+of writing where people drop the apostrophe. Context fixed the grammar, but not quite the tone.
 
 
 ## Findings & What it changed
