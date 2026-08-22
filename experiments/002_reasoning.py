@@ -1,23 +1,41 @@
+"""
+Experiment 002 — Knob A: direct vs. step-by-step on grade-school word problems.
+
+Runs each problem BOTH ways through Qwen2.5-1.5B-Instruct, extracts the final
+number, and tallies how many are correct in each condition.
+"""
+
 import re
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-
+# --- Load model + tokenizer -------------------------------------------------
+# Unlike GPT-2 in 001, we use the AUTO classes: they read the checkpoint's config
+# and pick the right architecture for you. Same from_pretrained pattern.
 MODEL_ID = "Qwen/Qwen2.5-1.5B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 model = AutoModelForCausalLM.from_pretrained(MODEL_ID, torch_dtype="auto")
 model.eval()
 
+# --- The problem set --------------------------------------------------------
+# (question, correct_answer). Grade-school, single numeric answer. Start with
+# these; TODO: add more so you have 10-20. More problems = less noise.
 PROBLEMS = [
     ("Sarah has 3 boxes with 12 apples each. She gives away 7 apples. How many are left?", 29),
     ("A train travels 60 miles per hour for 2.5 hours. How many miles does it go?", 150),
     ("Tom buys 4 notebooks at $3 each and pays with a $20 bill. How much change does he get?", 8),
     ("There are 24 students. Each needs 2 pencils. Pencils come in packs of 10. How many packs are needed?", 5),
     ("A rectangle is 7 cm wide and 9 cm tall. What is its area in square cm?", 63),
+    # TODO: add ~10 more of varied difficulty.
 ]
 
-DIRECT_INSTRUCTION = "" 
-STEPWISE_INSTRUCTION = ""
+# --- The two instructions (THE KNOB) ---------------------------------------
+# TODO: write the two instruction strings. This is the ONLY thing that changes
+# between conditions. Keep them short and parallel.
+#  - DIRECT: tell it to give only the final numeric answer, nothing else.
+#  - STEPWISE: tell it to think step by step, then give the final answer.
+DIRECT_INSTRUCTION = ""   # TODO
+STEPWISE_INSTRUCTION = ""  # TODO
 
 
 def ask(question, instruction, max_new_tokens):
